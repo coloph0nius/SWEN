@@ -1,6 +1,13 @@
 # Projekt SWEN – GIT zur verteilten Software Entwicklung
 ## Vorlesetext im Lehrvideo
 
+### Einleitung
+Git ist ein verteiltes Versionsverwaltungssystem, das eine nicht-lineare Entwicklung ermöglicht.
+Die grundlegende Funktion von Git ist das Erstellen von Commits. Das sind Momentaufnahmen des Codes zu einer bestimmten Zeit.
+Bevor der Entwickler einen Commit erstellt, gibt er Git mit einer Reihe von Befehlen zu verstehen, welche Änderungen getrackt werden sollen. [git add / git rm im Video]
+Git speichert dann beim Committen, was sich zum vorigen Commit verändert hat. [git commit -m im Video]
+Der Entwickler kann in seinem Git-Repository zu einem späteren Zeitpunkt zu jedem dieser Commits wieder zurückwechseln.
+
 ### Implikationen für Softwarearchitektur
 Die verteilte Arbeitsweise mit Git ist gut mit den Vorgehensweisen der objektorientierten Programmierung vereinbar. Die zugrundeliegende Überlegung der klar eingegrenzten Bereiche in der Objektorientierung ist nämlich genau die Arbeitsweise, die ein Team braucht, das mit Git arbeitet, um möglichst wenige Merge-Konflikte zu erzeugen.
 Jedes Mal, wenn verschiedene Entwickler nämlich gleichzeitig an derselben Stelle im Code arbeiten, kann es zu Merge-Konflikten kommen. Hier tritt also doppelt geleistete Arbeit auf, die zu allem Überfluss dann noch entwirrt werden muss.
