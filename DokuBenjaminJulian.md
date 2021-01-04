@@ -1,9 +1,9 @@
-# Überschrift 1
-## Überschrift 2
-### Überschrift 3
+# Projekt SWEN – GIT zur verteilten Software Entwicklung
 
-Das ist kein Text.
+## Implikationen für Softwarearchitektur
+- erster Draft für den Vorlesetext dieses Kapitels verfasst
+- mögliche Überschneidungen mit Kapitel Merge-Konflikte
 
- - Punkt 1
- - Punkt 2 
- - Punkt 3
+### Inhalte
+- Objektorientierung umsetzen mit Git
+- Konflikt: Arbeitsteilung vs Redundanzen
