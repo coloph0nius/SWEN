@@ -23,3 +23,10 @@
 
 ### Inhalte
 - Diff für Branches oder Commits
+
+## Dokumentationsmöglichkeiten in Git
+- Vorlesetext der Dokumentationsmöglichkeiten verfasst
+
+### Inhalte
+- Commit-Messages
+- Markdown

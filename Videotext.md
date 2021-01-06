@@ -47,4 +47,8 @@ Der aktuelle Stand eines jeden Branches kann mit dem Befehl "git checkout" einge
 ### Diff
 Mit dem Befehl "git diff" kann man sich auch anzeigen lassen, was sich zwischen zwei Commits verändert hat, oder wie sich zwei branches voneinander unterscheiden. Commits können dabei über ihren Hash spezifiziert werden. Branch-Namen werden durch zwei Punkte voneinander getrennt.
 
+### Dokumentationsmöglichkeiten in Git
+Um in großen, kollaborativen Software-Bibliotheken den Überblick über Veränderungen zwischen Commits und Features der Software zu behalten, ist eine vollständige Dokumentation unerlässlich.
+Git unterstützt das, indem es den Entwickler dazu auffordert, zu jedem Commit eine Commit-Nachricht zu verfassen.
+Außerdem bieten die gängigen Git-Server wie Github oder Gitlab Ünterstützung für Textformatierung in Markdown-Notation. Markdown vereinfacht das schnelle erstellen von leicht renderbaren, übersichtlichen Readmes, Changelogs und ähnlichem.
 
