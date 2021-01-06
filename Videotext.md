@@ -41,5 +41,10 @@ Gitflow wirkt auf den ersten Blick im Gegensatz zu den vorherigen Branching Stra
 Wie bei den vorherigen Strategien befinden sich auf dem Master nur stabile und fertige Versionen des Projektes. Der Hotfix Branch dient für zur Implementierung kleiner dringender Änderungen und zur Fehlerbehebung.
 Die eigentliche Entwicklung passiert in den beiden Feature-Branches, sobald ein Feature fertig implementiert wurde, wird es in den Devleop-Branch gemerged um Merg-Konflikte mit anderen Features zu bereinigen. Ist die Entwicklung komplett abgeschlossen wird der Develop-Branch in den Release-Branch integriert, um danach in den Master-Branch aufgenommen zu werden.
 
+### Checkout
+Der aktuelle Stand eines jeden Branches kann mit dem Befehl "git checkout" eingesehen werden. Git wendet dann alle nötigen Veränderungen auf das lokale Repository an, sodass es sich auf dem Stand des gewünschten Branches befindet.
+
+### Diff
+Mit dem Befehl "git diff" kann man sich auch anzeigen lassen, was sich zwischen zwei Commits verändert hat, oder wie sich zwei branches voneinander unterscheiden. Commits können dabei über ihren Hash spezifiziert werden. Branch-Namen werden durch zwei Punkte voneinander getrennt.
 
 

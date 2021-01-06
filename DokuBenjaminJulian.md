@@ -14,3 +14,12 @@
 ### Inhalte
 - Objektorientierung umsetzen mit Git
 - Konflikt: Arbeitsteilung vs Redundanzen
+
+## Checkout
+- Checkout-Befehl erklärt
+
+## Diff
+- Diff-Befehl erklärt
+
+### Inhalte
+- Diff für Branches oder Commits
