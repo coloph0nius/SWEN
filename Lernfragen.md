@@ -30,3 +30,18 @@
 
 ### Develop-Branch
 - Falsch. Der Develop-Branch ist nur zum Mergen der Feature-Branches zuständig, hier sollen gegebenenfalls auftretende Merge-Konflikte behoben werden.
+
+## Ein Branch enthält immer eine Kopie des gesamten Projekts.
+
+### Ja
+- Richtig
+
+### Nein, Commits die auf einem anderen Branch gemacht wurden, sind nicht sichtbar
+- Falsch. Ein neuer Branch enthält immer die gesamte git-history
+
+### Nein, nur die Commits seit dem letzten Merge sind enthalten
+- Falsch. Ein neuer Branch enthält immer die gesamte git-history
+
+### Nein, jeder neue Branch enthält immer den Ursprungszustand des Projekts
+- Falsch. Ein neuer Branch enthält immer die gesamte git-history
+
