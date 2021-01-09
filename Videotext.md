@@ -1,16 +1,15 @@
 # Projekt SWEN – GIT zur verteilten Software Entwicklung
 ## Vorlesetext im Lehrvideo
 
-### Einleitung
+### Einleitung / Inhalt
+
+
+### Einleitung / Überblick über GIT
 Git ist ein verteiltes Versionsverwaltungssystem, das eine nicht-lineare Entwicklung ermöglicht.
 Die grundlegende Funktion von Git ist das Erstellen von Commits. Das sind Momentaufnahmen des Codes zu einer bestimmten Zeit.
 Bevor der Entwickler einen Commit erstellt, gibt er Git mit einer Reihe von Befehlen zu verstehen, welche Änderungen getrackt werden sollen. [git add / git rm im Video]
 Git speichert dann beim Committen, was sich zum vorigen Commit verändert hat. [git commit -m im Video]
 Der Entwickler kann in seinem Git-Repository zu einem späteren Zeitpunkt zu jedem dieser Commits wieder zurückwechseln.
-
-#### Vorstellung Beispiel-Projekt
-Zur anschaulichen Darstellung, wie GIT funktioniert haben wir uns ein Beispiel-Szenario überlegt. Mit diesem werden wir dann die Funktionsweise von GIT erklären.
-Das Beispiel-Projekt besteht aus drei Klassen: eine GUI-Klasse,die die Oberfläche beschreibt, eine Controller-Klasse, die das Backend und die Oberfläche verbindet, und eine Klasse, die für das Backend und die Datenbankverbindung zuständig ist.
 
 ### Branching
 Branching ist eines der wichtigsten Bestandteile von GIT. In GIT wurden Branches sehr einfach und schlank implementiert, wodurch schnell und ohne Probleme mit ihnen gearbeitet werden kann.
@@ -47,11 +46,16 @@ Außerdem bieten die gängigen Git-Server wie Github oder Gitlab Ünterstützung
 ### Fazit
 Letzlich ist zu Sagen, dass GIT für eine effektive verteilte Software entwicklung unabdingbar ist. Wenn wir uns noch an ein paar Grundregeln zur Arbeitsweise mit GIT halten, kann der Entwicklungsprozess nahezu Reibungslos ablaufen. Wichtig sind aussagekräftige Commit-Messages, denn durch diese wird fast automatisch eine kleine Dokumentation über unser Projekt erstellt. Abstraktion unseres Codes ist auch ein wichtiges Grundprinzip, denn die Vermeidung von Merge-Konflikten beschleunigt unsere Entwicklung maßgeblich. Schließlich ist es noch hilfreich, wenn wir für unser Projekt je nach Vorgehens-Modell eine sinnvolle Branching-Strategie wählen, nach der wir unser Projekt entwickeln.
 
+
+
 ### Checkout
 Der aktuelle Stand eines jeden Branches kann mit dem Befehl "git checkout" eingesehen werden. Git wendet dann alle nötigen Veränderungen auf das lokale Repository an, sodass es sich auf dem Stand des gewünschten Branches befindet.
 
 ### Diff
 Mit dem Befehl "git diff" kann man sich auch anzeigen lassen, was sich zwischen zwei Commits verändert hat, oder wie sich zwei branches voneinander unterscheiden. Commits können dabei über ihren Hash spezifiziert werden. Branch-Namen werden durch zwei Punkte voneinander getrennt.
 
+#### Vorstellung Beispiel-Projekt
+Zur anschaulichen Darstellung, wie GIT funktioniert haben wir uns ein Beispiel-Szenario überlegt. Mit diesem werden wir dann die Funktionsweise von GIT erklären.
+Das Beispiel-Projekt besteht aus drei Klassen: eine GUI-Klasse,die die Oberfläche beschreibt, eine Controller-Klasse, die das Backend und die Oberfläche verbindet, und eine Klasse, die für das Backend und die Datenbankverbindung zuständig ist.
 
 
