@@ -46,7 +46,6 @@
 - Falsch. Ein neuer Branch enthält immer die gesamte git-history
 
 
-
 ## Wie finden Änderungen den Weg ins lokale Repository?
 
 ### Sie müssen Commited werden.
