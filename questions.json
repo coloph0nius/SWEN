@@ -2,7 +2,7 @@
   "questionsheet": [
   {
     "question": "Welche Strategie beim Benutzen von Git ermöglicht in Kombination mit dem Konzept der Klassen in der objektorientierten Programmierung die Verhinderung von Merge-Konflikten?",
-    "difficulty": "schwer",
+    "difficulty": "mittel",
     "answers": [
       {
         "answer": "Zusammenfassung mehrerer Änderungen in Commits",
@@ -28,7 +28,7 @@
   },
   {
     "question": "In welchem Branch findet die Entwicklung statt, wenn Sie nach der Branching-Strategie Gitflow arbeiten?",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "answers": [
       {
         "answer": "Im Release-Branch",
