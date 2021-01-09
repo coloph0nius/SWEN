@@ -2,7 +2,7 @@
   "questionsheet": [
   {
     "question": "Welche Strategie beim Benutzen von Git ermöglicht in Kombination mit dem Konzept der Klassen in der objektorientierten Programmierung die Verhinderung von Merge-Konflikten?",
-    "difficulty": "extrem schwer",
+    "difficulty": "schwer",
     "answers": [
       {
         "answer": "Zusammenfassung mehrerer Änderungen in Commits",
@@ -28,7 +28,7 @@
   },
   {
     "question": "In welchem Branch findet die Entwicklung statt, wenn Sie nach der Branching-Strategie Gitflow arbeiten?",
-    "difficulty": "schwer",
+    "difficulty": "mittel",
     "answers": [
       {
         "answer": "Im Release-Branch",
@@ -54,7 +54,7 @@
   },
   {
     "question": "Ein Branch enthält immer eine Kopie des gesamten Projekts.",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "answers": [
       {
         "answer": "Nein, Commits die auf einem anderen Branch gemacht wurden, sind nicht sichtbar.",
