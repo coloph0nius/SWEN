@@ -53,28 +53,28 @@
     ]
   },
   {
-    "question": "Ein Branch enthält immer eine Kopie des gesamten Projekts.",
-    "difficulty": "einfach",
+    "question": "Welche Aussage trifft NICHT zu?",
+    "difficulty": "leicht",
     "answers": [
       {
-        "answer": "Nein, Commits die auf einem anderen Branch gemacht wurden, sind nicht sichtbar.",
+        "answer": "Mergen beschreibt den Prozess, zwei Branches zuasmmen zu führen.",
         "correctness": "Falsch",
-        "reason": "Ein neuer Branch enthält immer die gesamte git-history."
+        "reason": "Richtig"
       },
       {
-        "answer": "Nein, nur die Commits seit dem letzten Merge sind enthalten.",
+        "answer": "-git merge ist der zugehörige Befehl, um 2 Branches zu mergen.",
         "correctness": "Falsch",
-        "reason": "Ein neuer Branch enthält immer die gesamte git-history."
+        "reason": "Richtig."
       },
       {
-        "answer": "Nein, jeder neue Branch enthält immer den Ursprungszustand des Projekts.",
+        "answer": "Unstrukturierter Code sorgt für häufigere Merge-Konflikte.",
         "correctness": "Falsch",
-        "reason": "Ein neuer Branch enthält immer die gesamte git-history."
+        "reason": "Richtig"
       },
       {
-        "answer": "Ja",
+        "answer": "Bei einer in beiden Branches veränderten Datei, wird die neuere Version übernommen.",
         "correctness": "Richtig",
-        "reason": "Ein neuer Branch enthält immer die gesamte git-history"
+        "reason": "In diesem Fall gibt es ein Merge-Konflikt, diesen muss man manuell auflösen."
       }
     ]
   },
