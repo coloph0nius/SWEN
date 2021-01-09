@@ -1,0 +1,108 @@
+{
+  "questionsheet": [
+  {
+    "question": "Welche Strategie beim Benutzen von Git ermöglicht in Kombination mit dem Konzept der Klassen in der objektorientierten Programmierung die Verhinderung von Merge-Konflikten?",
+    "difficulty": "schwer",
+    "answers": [
+      {
+        "answer": "Zusammenfassung mehrerer Änderungen in Commits",
+        "correctness": "Falsch",
+        "reason": "Je mehr Änderungen in einen Commit gepackt werden, desto eher treten Merge-Konflikte auf."
+      },
+      {
+        "answer": "Feature-Branching",
+        "correctness": "Richtig",
+        "reason": "Das Aufteilen der Arbeit anhand von Features, die in ihren eigenen Klassendateien programmiert werden, kann Merge-Konflikte effektiv vermeiden."
+      },
+      {
+        "answer": "Commit-Nachrichten",
+        "correctness": "Falsch",
+        "reason": "Commit-Nachrichten sagen meist nichts darüber aus, an welcher genauen Stelle im Code etwas verändert wurde und können deshalb Merge-Konflikte nicht verhindern."
+      },
+      {
+        "answer": "Lineares Programmieren auf dem Master-Branch",
+        "correctness": "Falsch",
+        "reason": "Vermeidet zwar Merge-Konflikte, braucht aber keine Klassen."
+      }
+    ]
+  },
+  {
+    "question": "In welchem Branch findet die Entwicklung statt, wenn Sie nach der Branching-Strategie Gitflow arbeiten?",
+    "difficulty": "mittel",
+    "answers": [
+      {
+        "answer": "Im Release-Branch",
+        "correctness": "Falsch",
+        "reason": "Der Release-Branch dient der Möglichtkeit Bug-fixing oder Ähnliches zu betreiben, bevor dieser dann in den master-Branch gemerged wird."
+      },
+      {
+        "answer": "Im Master-Branch",
+        "correctness": "Falsch",
+        "reason": "Im master-Branch dürfen sich nur stabile und vollständige Versionen des Projektes befinden, deshalb darf in diesem keine Entwicklung betrieben werden."
+      },
+      {
+        "answer": "Im Feature-Branch",
+        "correctness": "Richtig",
+        "reason": "In den Feature-Branches findet die eigentliche Entwicklung der Software statt."
+      },
+      {
+        "answer": "Im Develop-Branch",
+        "correctness": "Falsch",
+        "reason": "Der Develop-Branch ist nur zum Mergen der Feature-Branches zuständig, hier sollen gegebenenfalls auftretende Merge-Konflikte behoben werden."
+      }
+    ]
+  },
+  {
+    "question": "Welche Aussage trifft NICHT zu?",
+    "difficulty": "leicht",
+    "answers": [
+      {
+        "answer": "Mergen beschreibt den Prozess, zwei Branches zuasmmen zu führen.",
+        "correctness": "Falsch",
+        "reason": "Richtig"
+      },
+      {
+        "answer": "-git merge ist der zugehörige Befehl, um 2 Branches zu mergen.",
+        "correctness": "Falsch",
+        "reason": "Richtig."
+      },
+      {
+        "answer": "Unstrukturierter Code sorgt für häufigere Merge-Konflikte.",
+        "correctness": "Falsch",
+        "reason": "Richtig"
+      },
+      {
+        "answer": "Bei einer in beiden Branches veränderten Datei, wird die neuere Version übernommen.",
+        "correctness": "Richtig",
+        "reason": "In diesem Fall gibt es ein Merge-Konflikt, diesen muss man manuell auflösen."
+      }
+    ]
+  },
+  {
+    "question": "Wie finden Änderungen den Weg ins lokale Repository?",
+    "difficulty": "einfach",
+    "answers": [
+      {
+        "answer": "Durch Pushen.",
+        "correctness": "Falsch",
+        "reason": "Durch Pushen werden Änderungen im lokalen Repository ins Remote-Repository veröffentlicht, nicht ins lokale Repository aufgenommen."
+      },
+      {
+        "answer": "Sie müssen Committed werden.",
+        "correctness": "Richtig",
+        "reason": ""
+      },
+      {
+        "answer": "Änderungen werden schon während des Schreibens durch Git ins Repository aufgenommen.",
+        "correctness": "Falsch",
+        "reason": "Git ist kein Hintergrundprozess, der ständig läuft, sondern wird über explizite Befehle gesteuert, die den aktuellen Arbeitsstand verarbeiten."
+      },
+      {
+        "answer": "Durch den Befehl git add.",
+        "correctness": "Falsch",
+        "reason": "Weil die Änderungen dadurch nur in die Staging Area aufgenommen werden. Hinzufügen zum Repository erfolgt durch Commiten"
+      }
+    ]
+  }
+  ]
+}

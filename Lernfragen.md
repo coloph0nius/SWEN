@@ -45,3 +45,18 @@
 ### Nein, jeder neue Branch enthält immer den Ursprungszustand des Projekts
 - Falsch. Ein neuer Branch enthält immer die gesamte git-history
 
+
+
+## Wie finden Änderungen den Weg ins lokale Repository?
+
+### Sie müssen Commited werden.
+- Richtig.
+
+### Durch Pushen
+- Falsch. Durch Pushen werden Änderungen im lokalen Repository ins Remote-Repository veröffentlicht, nicht ins lokale Repository aufgenommen.
+
+### Änderungen werden schon während des Schreibens durch Git ins Repository aufgenommen.
+- Falsch. Git ist kein Hintergrundprozess, der ständig läuft, sondern wird über explizite Befehle gesteuert, die den aktuellen Arbeitsstand verarbeiten.
+
+### Durch den Befehl git add.
+- Falsch, weil die Änderungen dadurch nur in die Staging Area aufgenommen werden. Hinzufügen zum Repository erfolgt durch Commiten
