@@ -14,11 +14,12 @@ GIT erstellt bei jedem Commit einen Schnappschuss des Projekts, sodass jeder Bea
 Der Entwickler kann innerhalb des Repositories jederzeit zu einem beliebigen Commit springen.
 
 ### Branching
-Branching ist ein Zentraler Bestandteil von GIT. In GIT wurden Branches sehr einfach und schlank implementiert, dadurch kann schnell und ohne Probleme mit ihnen gearbeitet werden kann.
+Branching ist ein Zentraler Bestandteil von GIT. In GIT wurden Branches sehr einfach und schlank implementiert, dadurch kann schnell und ohne Probleme mit ihnen gearbeitet werden.
 In der verteilten Softwareentwicklung helfen sie vor allem den Entwicklern unabhängig und mit geringen Konflikten gleichzeitig an einem Projekt zu arbeiten, wodurch das Team vor Störungen durch instabile Features geschützt ist.
 Branches sind das zentrale Feature von git, welches in der verteilten Softwareentwicklung eine störungsfreie Arbeit ermöglicht. Richtig angewandt, sorgen Branches dafür dass Entwickler unabhängig und ohne Konflikte gleichzeitig an einem Projekt arbeiten können. 
 Branches sind eine Abzweigung von der Hauptentwicklungslinie, das ermöglicht es, neue Features erst zu implementieren, wenn sie wirklich fertig sind.
-Jeder Branch bildet eine Abzweigung von der Hauptentwicklungslinie. So kann auf einem Branch beliebig programmiert und getestet werden, ohne dass das Hauptprojekt durch unfertige oder instabile Features unbenutzbar wird. Änderungen werden also erst wieder in die Hauptlinie eingebracht, wenn sie zu 100% fertiggestellt sind. 
+Jeder Branch bildet eine Abzweigung von der Hauptentwicklungslinie. So kann auf einem Branch beliebig programmiert und getestet werden, ohne dass das Hauptprojekt durch unfertige oder instabile Features unbenutzbar wird. Änderungen werden also erst wieder in die Hauptlinie eingebracht, wenn sie zu 100% fertiggestellt sind.
+-viele entwickler können arbeiten
 
 ### Branching Strategien
 Durchgeführt wird das Branching nach einer bestimmten Strategie, die ein Vorgehensmodell der Entwicklung vorgibt. So erhält jeder Branch einen bestimmten Zweck. Branching Strategien helfen bei der Organisation des Projektes und bei der Unterstützung von Vorgehensmodellen wie etwa Scrum. Branching Strategien sorgen aber auch für Ordnung innerhalb des Entwicklungsprozesses.
@@ -27,14 +28,18 @@ Durchgeführt wird das Branching nach einer bestimmten Strategie, die ein Vorgeh
 Feature Branching ist die erste Branchingstrategie, die wir uns anschauen werden. Es ist eine einfache und offene Strategie. Dem Entwicklerteam bleibt hierbei viel Freiraum bei der Umsetzung dieser Strategie.
 Feature Branching ist gut für lineare Vorgehensmodelle, wie zum Beispiel dem Wasserfallmodell geeignet.
 Es wird, wie der Name schon andeutet für jedes Feature des Projektes ein neuer Branch angelegt. Auf dem Beispielbild sind dass die Branches A und B. Dadurch ist die Entwicklung eines Features getrennt von der Hauptline. Der Entwickler kann ungestört an dem Feature arbeiten ohne dass er einen bestehenden Build zerstört. Wurde ein Feature fertig implementiert und getestet, wird der zugehörige Branch in den master-Branch gemerged.
+-jeder entwickler ein branch, management
+-gut für verteiltes arbeiten
 
 #### Gitflow
-Gitflow wirkt auf den ersten Blick im Gegensatz zu der vorherigen Branching Strategie sehr komplex. Es passt das Feature Branching an agile Vorgehensweisen an, im Gegensatz zum Feature Branching bleibt den Entwicklern allerdings weniger Freiraum bei der Umsetzung.
+Als nächste Strategie stellen wir GitFlow vor. 
+Gitflow wirkt auf den ersten Blick im Gegensatz zu der vorherigen Branching Strategie sehr komplex. Es passt das Feature Branching an agile Vorgehensweisen an, der typische dynamische Workflow wie zum Beispiel bei SCRUM wird mit Gitflow unterstützt. Durch die Struktur der Branches wird der Management-Overhead erheblich reduziert. 
+Im Gegensatz zum Feature Branching bleibt den Entwicklern allerdings weniger Freiraum bei der Umsetzung.
 Wie bei den vorherigen Strategien befinden sich auf dem Master nur stabile und fertige Versionen des Projektes. Der Hotfix Branch dient zur Implementierung kleiner dringender Änderungen und zur Fehlerbehebung.
 Die eigentliche Entwicklung passiert in den Feature-Branches, im Beispiel Feature 1 und Feature 2. Sobald ein Feature fertig implementiert wurde, wird es in den Devleop-Branch gemerged um Merge-Konflikte mit anderen Features zu bereinigen. Ist die Entwicklung komplett abgeschlossen wird der Develop-Branch in den Release-Branch integriert, um danach in den Master-Branch aufgenommen zu werden. Dies ist besonderst hilfreich bei iterativen Vorgehensweise, wenn etwa wöchentliche Releases veröffentlicht werden. Wird ein Fehler gefunden, kann der Entwickler schnell eine bestimmte Version auschecken, um zu überprüfen an welcher Stelle der Bug einprogrammiert wurde. 
 
 ### Merging
-Der Begriff Merging wurde bereits mehrmals im Video erwähnt, es handelt sich dabei um das Zusammenführen von zwei Branches. Beim Merging wird also die bisherige Version des Projekts mit einer neueren überschrieben, wobei die alten Stände selbstverständlich im Repository erhalten bleiben. Merge-Konflikte entstehen, wenn in zwei Branches Änderungen an der selben Datei vorgenommen wurden. Hierbei übernimmt git nicht etwa einfach die zeitlich gesehen neuere Version, sondern frägt explizit den Entwickler, welche Version er übernehmen möchte.
+Der Begriff Merging wurde bereits mehrmals im Video erwähnt, es handelt sich dabei um das Zusammenführen von zwei Branches. Beim Merging wird also die bisherige Version des Projekts mit einer neueren überschrieben, wobei die alten Stände selbstverständlich im Repository erhalten bleiben. Das bedeutet dass die komplette Projekthistorie gespeichert und abrufbar ist. Merge-Konflikte entstehen, wenn in zwei Branches Änderungen an der selben Datei vorgenommen wurden. Hierbei übernimmt git nicht etwa einfach die zeitlich gesehen neuere Version, sondern frägt explizit den Entwickler, welche Version er übernehmen möchte.
 GIT unterstützt den Entwickler beim Merging durch eine Vergleich geänderter Dateien mit ihren Änderungen aus beiden Branches. Merge-Konflikte sind in einer verteilten Arbeitsweise unerwünscht und kosten Zeit um sie zu Beheben. Um Konflikte beim Mergen zu vermeiden, muss die Softwarearchitektur an die Arbeitsweise angepasst werden.
 
 ### Implikationen für Softwarearchitektur
@@ -47,9 +52,8 @@ Um in großen, kollaborativen Software-Projekten den Überblick über Veränderu
 Git unterstützt das, indem es den Entwickler dazu auffordert, zu jedem Commit eine Commit-Nachricht zu verfassen. Wenn diese Commit-Messages konsequent sinnvoll formuliert sind, wird dadurch schon eine leicht nachvollziehbare Dokumentation über Änderungen und Implementierungen erstellt.
 Außerdem bieten viele gängige Git-Plattformen wie Github oder Gitlab Unterstützung für Textformatierung in Markdown-Notation. Markdown vereinfacht das erstellen von leicht darstellbaren Readmes, Changelogs und ähnlichem.
 
-
 ### Fazit
-Letzlich ist zu Sagen, dass GIT für eine effektive verteilte Software entwicklung unabdingbar ist. Wenn wir uns an ein paar Grundregeln zur Arbeitsweise mit GIT halten, kann der Entwicklungsprozess nahezu reibungslos ablaufen. Wichtig sind aussagekräftige Commit-Messages, denn durch diese wird fast automatisch eine kleine Dokumentation über unser Projekt erstellt. Abstraktion unseres Codes ist ebenfalls ein wichtiges Grundprinzip, denn die Vermeidung von Merge-Konflikten beschleunigt die Entwicklung maßgeblich. Schließlich ist es noch hilfreich, wenn wir je nach Vorgehensmodell eine sinnvolle Branching-Strategie wählen, nach welcher wir unser Projekt entwickeln.
+Letzlich ist zu Sagen, dass GIT für eine effektive verteilte Software entwicklung unabdingbar ist. Wenn wir uns an ein paar Grundregeln zur Arbeitsweise mit GIT halten, kann der Entwicklungsprozess nahezu reibungslos ablaufen. Wichtig sind aussagekräftige Commit-Messages, denn durch diese wird fast automatisch eine kleine Dokumentation über unser Projekt erstellt. Modularität unseres Codes ist ebenfalls ein wichtiges Grundprinzip, denn die Vermeidung von Merge-Konflikten beschleunigt die Entwicklung maßgeblich. Schließlich ist es noch hilfreich, wenn wir je nach Vorgehensmodell eine sinnvolle Branching-Strategie wählen, nach welcher wir unser Projekt entwickeln.
 
 
 
