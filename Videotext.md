@@ -2,54 +2,54 @@
 ## Vorlesetext im Lehrvideo
 
 ### Einleitung / Inhalt
-Herzlich Willkommen zu diesem Lernvideo, in dem gezeigt wird, wie git uns bei einer verteilten Softwareentwicklung unterstützt. 
+Herzlich Willkommen zu diesem Lernvideo, in dem gezeigt wird, wie uns git bei einer verteilten Softwareentwicklung unterstützt. 
 
 ### Einleitung / Überblick über GIT
 Zunächst wollen wir einen kurzen Überblick über die Konzepte von GIT schaffen.
-Git ist ein verteiltes Versionsverwaltungssystem, das eine nicht-lineare Entwicklung ermöglicht.
-Die grundlegende Funktion von Git ist das Erstellen von Commits. Das sind Momentaufnahmen des Codes zu einer bestimmten Zeit.
-Bevor der Entwickler einen Commit erstellt, gibt er Git mit einer Reihe von Befehlen zu verstehen, welche Änderungen getrackt werden sollen. [git add / git rm im Video]
-GIT erstellt bei jedem Commit einen Schnappschuss des Projekts. Damit wird jeder zwischenstand des Projektes in git gespeichert.[git commit -m im Video]
-Der Entwickler kann in seinem Git-Repository zu einem späteren Zeitpunkt zu jedem dieser Commits wieder zurückwechseln.
+Git ist ein verteiltes Versionsverwaltungssystem, welches eine nicht-lineare Entwicklung ermöglicht.
+Die grundlegende Funktion von Git ist das Erstellen von Commits. Das sind Momentaufnahmen des Codes zu einem bestimmten Änderungszeitpunkt.
+Bevor der Entwickler einen Commit erstellt, gibt er Git mit einer Reihe von Befehlen zu verstehen, welche Änderungen getrackt werden sollen. 
+Zu Beginn wird mit git pull das eigene lokale Repository auf den neusten Stand gebracht. Danach wird an der Klasse MyClass.java gearbeitet, und die Änderungen gesichert. git nimmt die Änderungen erst mit dem Befehl git add MyClass.java in sein System auf. Mit git add lassen sich noch weiter Dateien aufnehmen. Mit git commit wird dann der eigentliche Commit erstellt. In dem message Feld sollte eine sinnvolle Beschreibung der Änderungen bzw. Inhalte des Commits stehen. 
+GIT erstellt bei jedem Commit einen Schnappschuss des Projekts, sodass jeder Bearbeitungsstand in git hinterlegt ist.
+Der Entwickler kann innerhalb des Repositories jederzeit zu einem beliebigen Commit springen.
 
 ### Branching
-Branching ist ein Zentraler Bestandteil von GIT. In GIT wurden Branches sehr einfach und schlank implementiert, wodurch schnell und ohne Probleme mit ihnen gearbeitet werden kann.
+Branching ist ein Zentraler Bestandteil von GIT. In GIT wurden Branches sehr einfach und schlank implementiert, dadurch kann schnell und ohne Probleme mit ihnen gearbeitet werden kann.
 In der verteilten Softwareentwicklung helfen sie vor allem den Entwicklern unabhängig und mit geringen Konflikten gleichzeitig an einem Projekt zu arbeiten, wodurch das Team vor Störungen durch instabile Features geschützt ist.
-Branches sind eine Abzweigung, von der Hauptentwicklungslinie, das ermöglicht es, neue Features erst zu implementieren, wenn sie wirklich fertig sind.
+Branches sind das zentrale Feature von git, welches in der verteilten Softwareentwicklung eine störungsfreie Arbeit ermöglicht. Richtig angewandt, sorgen Branches dafür dass Entwickler unabhängig und ohne Konflikte gleichzeitig an einem Projekt arbeiten können. 
+Branches sind eine Abzweigung von der Hauptentwicklungslinie, das ermöglicht es, neue Features erst zu implementieren, wenn sie wirklich fertig sind.
+Jeder Branch bildet eine Abzweigung von der Hauptentwicklungslinie. So kann auf einem Branch beliebig programmiert und getestet werden, ohne dass das Hauptprojekt durch unfertige oder instabile Features unbenutzbar wird. Änderungen werden also erst wieder in die Hauptlinie eingebracht, wenn sie zu 100% fertiggestellt sind. 
 
 ### Branching Strategien
-Durchgeführt wird das Branching nach einer bestimmten Strategie, die eine Art Vorgehensmodell der Entwicklung vorgibt. So erhält jeder Branch einen bestimmten Zweck.Branching Strategien helfen vor allem dem Projektmanagement bei der Organisation und bei der Unterstützung von Vorgehensmodellen wie Scrum. Branching Strategien sorgen aber auch für einen gewisse Ordnung innerhalb des Entwicklungsprozesses.
+Durchgeführt wird das Branching nach einer bestimmten Strategie, die ein Vorgehensmodell der Entwicklung vorgibt. So erhält jeder Branch einen bestimmten Zweck. Branching Strategien helfen bei der Organisation des Projektes und bei der Unterstützung von Vorgehensmodellen wie etwa Scrum. Branching Strategien sorgen aber auch für Ordnung innerhalb des Entwicklungsprozesses.
 
 #### Feature Branching
-Feature Branching ist die erste Branchingstrategie, die wir uns anschauen werden. Es ist eine einfache und offene Strategie. Das bedeutet, das dem Entwicklerteam viel Freiraum bei der Umsetzung dieser Strategie bleibt.
-Diese Strategie ist gut für lineare Vorgehensmodelle, wie zum Beispiel dem Wasserfallmodell geeignet.
-Es wird, wie der Name schon impliziert für jedes Feature des Projektes ein neuer Branch angelegt. Dadurch ist die Entwicklung eines Features separiert von der Mainline, wodurch der Entwickler ungestört an dem Feature arbeiten kann ohne, dass Probleme mit dem fertigen Release entstehen. Wurde ein Feature fertig implementiert und getestet, wird der zugehörige Feature-Branch in den master gemerged.
+Feature Branching ist die erste Branchingstrategie, die wir uns anschauen werden. Es ist eine einfache und offene Strategie. Dem Entwicklerteam bleibt hierbei viel Freiraum bei der Umsetzung dieser Strategie.
+Feature Branching ist gut für lineare Vorgehensmodelle, wie zum Beispiel dem Wasserfallmodell geeignet.
+Es wird, wie der Name schon andeutet für jedes Feature des Projektes ein neuer Branch angelegt. Auf dem Beispielbild sind dass die Branches A und B. Dadurch ist die Entwicklung eines Features getrennt von der Hauptline. Der Entwickler kann ungestört an dem Feature arbeiten ohne dass er einen bestehenden Build zerstört. Wurde ein Feature fertig implementiert und getestet, wird der zugehörige Branch in den master-Branch gemerged.
 
 #### Gitflow
-Gitflow wirkt auf den ersten Blick im Gegensatz zu der vorherigen Branching Strategie sehr komplex, doch eigentlich verbindet Gitflow nur das Feature Branching mit agilen Vorgehensweisen.
-Im Gegensatz zum Feature Branching, bleibt den Entwicklern weniger Freiraum.
+Gitflow wirkt auf den ersten Blick im Gegensatz zu der vorherigen Branching Strategie sehr komplex. Es passt das Feature Branching an agile Vorgehensweisen an, im Gegensatz zum Feature Branching bleibt den Entwicklern allerdings weniger Freiraum bei der Umsetzung.
 Wie bei den vorherigen Strategien befinden sich auf dem Master nur stabile und fertige Versionen des Projektes. Der Hotfix Branch dient zur Implementierung kleiner dringender Änderungen und zur Fehlerbehebung.
-Die eigentliche Entwicklung passiert in den beiden Feature-Branches, sobald ein Feature fertig implementiert wurde, wird es in den Devleop-Branch gemerged um Merg-Konflikte mit anderen Features zu bereinigen. Ist die Entwicklung komplett abgeschlossen wird der Develop-Branch in den Release-Branch integriert, um danach in den Master-Branch aufgenommen zu werden.
+Die eigentliche Entwicklung passiert in den Feature-Branches, im Beispiel Feature 1 und Feature 2. Sobald ein Feature fertig implementiert wurde, wird es in den Devleop-Branch gemerged um Merge-Konflikte mit anderen Features zu bereinigen. Ist die Entwicklung komplett abgeschlossen wird der Develop-Branch in den Release-Branch integriert, um danach in den Master-Branch aufgenommen zu werden. Dies ist besonderst hilfreich bei iterativen Vorgehensweise, wenn etwa wöchentliche Releases veröffentlicht werden. Wird ein Fehler gefunden, kann der Entwickler schnell eine bestimmte Version auschecken, um zu überprüfen an welcher Stelle der Bug einprogrammiert wurde. 
 
 ### Merging
-Das Zusammenführen zweier Branches nennt man Merging. Somit können zwei Versionsstände eines Projektes zusammengeführt werden. Merge-konflikte entstehen, wenn in einer Datei an derselben Stelle in beiden Branches unterschiedliche Änderungen vorgenommen wurden.
-GIT unterstützt den Entwickler beim Merging durch eine Übersicht an geänderten Dateien mit ihren Änderungen für die beiden Branches. Dadurch kann jedes Teammitglied einen Merge durchführen, ohne selbst an den Branches gearbeitet zu haben. Merge-Konflikte sind in unserer verteilten Arbeitweise unerwünscht, um diese weitesgehend zu Vermeiden, müssen wir unsere Softwarearchitektur an unsere Arbeitsweise anpassen.
+Der Begriff Merging wurde bereits mehrmals im Video erwähnt, es handelt sich dabei um das Zusammenführen von zwei Branches. Beim Merging wird also die bisherige Version des Projekts mit einer neueren überschrieben, wobei die alten Stände selbstverständlich im Repository erhalten bleiben. Merge-Konflikte entstehen, wenn in zwei Branches Änderungen an der selben Datei vorgenommen wurden. Hierbei übernimmt git nicht etwa einfach die zeitlich gesehen neuere Version, sondern frägt explizit den Entwickler, welche Version er übernehmen möchte.
+GIT unterstützt den Entwickler beim Merging durch eine Vergleich geänderter Dateien mit ihren Änderungen aus beiden Branches. Merge-Konflikte sind in einer verteilten Arbeitsweise unerwünscht und kosten Zeit um sie zu Beheben. Um Konflikte beim Mergen zu vermeiden, muss die Softwarearchitektur an die Arbeitsweise angepasst werden.
 
 ### Implikationen für Softwarearchitektur
-Die verteilte Arbeitsweise mit Git ist gut mit den Vorgehensweisen der objektorientierten Programmierung vereinbar. Die zugrundeliegende Überlegung der klar eingegrenzten Bereiche in der Objektorientierung ist nämlich genau die Arbeitsweise, die ein Team braucht, das mit Git arbeitet, um möglichst wenige Merge-Konflikte zu erzeugen.
-Aufgaben verschiedener Entwickler können beim objektorientierten Programmieren auf verschiedene Objekte verteilt werden. 
-Merge Konflikte, werden effektiv vermieden, wenn an jedem Modul nur ein Entwickler arbeiten. Also ist es hilfreich, wenn Projektmodule klar voneinander abgegrenzt sind. 
-Dieses Prinzip nennt man Modularität.
+Die verteilte Arbeitsweise mit Git ist gut mit den Prinzipien der objektorientierten Programmierung vereinbar. Die Grundlagen der Objektorientierung wie Kapselung und Modularität sind genau die Merkmale, die ein Team braucht, welches mit Git arbeitet. Werden die Merkmale möglichst gut umgesetzt, sind sie eine große Hilfe um wenige Merge-Konflikte zu erzeugen.
+Aufgaben verschiedener Entwickler können beim objektorientierten Programmieren auf verschiedene Objekte verteilt werden. Wenn jeder Entwickler nur an einem Objekt arbeitet, können quasi keine Merge-Konflikte entstehen. 
 Dadurch treten Merge Konflikte nur noch an Stellen auf, an denen Module zusammengeführt werden, wie zum Beispiel Interfaces.
 
 ### Dokumentationsmöglichkeiten in Git
-Um in großen, kollaborativen Software-Bibliotheken den Überblick über Veränderungen zwischen Commits und Features der Software zu behalten, ist eine vollständige Dokumentation unerlässlich.
-Git unterstützt das, indem es den Entwickler dazu auffordert, zu jedem Commit eine Commit-Nachricht zu verfassen. Wenn diese Commit-Messages konsequent sinnvoll formuliert sind, wird dadurch schon eine leicht nachvollziehbare Dokumentation erstellt.
-Außerdem bieten die gängigen Git-Plattformen wie Github oder Gitlab Ünterstützung für Textformatierung in Markdown-Notation. Markdown vereinfacht das schnelle erstellen von leicht darstellbaren und übersichtlichen Readmes, Changelogs und ähnlichem.
+Um in großen, kollaborativen Software-Projekten den Überblick über Veränderungen zwischen Commits und Features der Software zu behalten, ist eine vollständige Dokumentation unerlässlich.
+Git unterstützt das, indem es den Entwickler dazu auffordert, zu jedem Commit eine Commit-Nachricht zu verfassen. Wenn diese Commit-Messages konsequent sinnvoll formuliert sind, wird dadurch schon eine leicht nachvollziehbare Dokumentation über Änderungen und Implementierungen erstellt.
+Außerdem bieten viele gängige Git-Plattformen wie Github oder Gitlab Unterstützung für Textformatierung in Markdown-Notation. Markdown vereinfacht das erstellen von leicht darstellbaren Readmes, Changelogs und ähnlichem.
 
 
 ### Fazit
-Letzlich ist zu Sagen, dass GIT für eine effektive verteilte Software entwicklung unabdingbar ist. Wenn wir uns noch an ein paar Grundregeln zur Arbeitsweise mit GIT halten, kann der Entwicklungsprozess nahezu Reibungslos ablaufen. Wichtig sind aussagekräftige Commit-Messages, denn durch diese wird fast automatisch eine kleine Dokumentation über unser Projekt erstellt. Abstraktion unseres Codes ist auch ein wichtiges Grundprinzip, denn die Vermeidung von Merge-Konflikten beschleunigt unsere Entwicklung maßgeblich. Schließlich ist es noch hilfreich, wenn wir für unser Projekt je nach Vorgehens-Modell eine sinnvolle Branching-Strategie wählen, nach der wir unser Projekt entwickeln.
+Letzlich ist zu Sagen, dass GIT für eine effektive verteilte Software entwicklung unabdingbar ist. Wenn wir uns an ein paar Grundregeln zur Arbeitsweise mit GIT halten, kann der Entwicklungsprozess nahezu reibungslos ablaufen. Wichtig sind aussagekräftige Commit-Messages, denn durch diese wird fast automatisch eine kleine Dokumentation über unser Projekt erstellt. Abstraktion unseres Codes ist ebenfalls ein wichtiges Grundprinzip, denn die Vermeidung von Merge-Konflikten beschleunigt die Entwicklung maßgeblich. Schließlich ist es noch hilfreich, wenn wir je nach Vorgehensmodell eine sinnvolle Branching-Strategie wählen, nach welcher wir unser Projekt entwickeln.
 
 
 
