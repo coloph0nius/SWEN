@@ -1,106 +1,110 @@
 {
-  "questionsheet": [
+  "fragen": [
   {
-    "question": "Welche Strategie beim Benutzen von Git ermöglicht in Kombination mit dem Konzept der Klassen in der objektorientierten Programmierung die Verhinderung von Merge-Konflikten?",
-    "difficulty": "mittel",
-    "answers": [
+    "text": "Welche Strategie beim Benutzen von Git ermöglicht in Kombination mit dem Konzept der Klassen in der objektorientierten Programmierung die Verhinderung von Merge-Konflikten?",
+    "bereich": "GIT Branching-Strategien",
+    "level": "mittel",
+    "antworten": [
       {
-        "answer": "Zusammenfassung mehrerer Änderungen in Commits",
-        "correctness": "Falsch",
-        "reason": "Je mehr Änderungen in einen Commit gepackt werden, desto eher treten Merge-Konflikte auf."
+        "text": "Zusammenfassung mehrerer Änderungen in Commits",
+        "korrekt": "Falsch",
+        "warum": "Je mehr Änderungen in einen Commit gepackt werden, desto eher treten Merge-Konflikte auf."
       },
       {
-        "answer": "Feature-Branching",
-        "correctness": "Richtig",
-        "reason": "Das Aufteilen der Arbeit anhand von Features, die in ihren eigenen Klassendateien programmiert werden, kann Merge-Konflikte effektiv vermeiden."
+        "text": "Feature-Branching",
+        "korrekt": "Richtig",
+        "warum": "Das Aufteilen der Arbeit anhand von Features, die in ihren eigenen Klassendateien programmiert werden, kann Merge-Konflikte effektiv vermeiden."
       },
       {
-        "answer": "Commit-Nachrichten",
-        "correctness": "Falsch",
-        "reason": "Commit-Nachrichten sagen meist nichts darüber aus, an welcher genauen Stelle im Code etwas verändert wurde und können deshalb Merge-Konflikte nicht verhindern."
+        "text": "Commit-Nachrichten",
+        "korrekt": "Falsch",
+        "warum": "Commit-Nachrichten sagen meist nichts darüber aus, an welcher genauen Stelle im Code etwas verändert wurde und können deshalb Merge-Konflikte nicht verhindern."
       },
       {
-        "answer": "Lineares Programmieren auf dem Master-Branch",
-        "correctness": "Falsch",
-        "reason": "Vermeidet zwar Merge-Konflikte, braucht aber keine Klassen."
+        "text": "Lineares Programmieren auf dem Master-Branch",
+        "korrekt": "Falsch",
+        "warum": "Vermeidet zwar Merge-Konflikte, braucht aber keine Klassen."
       }
     ]
   },
   {
-    "question": "In welchem Branch findet die Entwicklung statt, wenn Sie nach der Branching-Strategie Gitflow arbeiten?",
-    "difficulty": "schwer",
-    "answers": [
+    "text": "In welchem Branch findet die Entwicklung statt, wenn Sie nach der Branching-Strategie Gitflow arbeiten?",
+    "bereich": "Branching-Strategie Gitflow",
+    "level": "schwer",
+    "antworten": [
       {
-        "answer": "Im Release-Branch",
-        "correctness": "Falsch",
-        "reason": "Der Release-Branch dient der Möglichtkeit Bug-fixing oder Ähnliches zu betreiben, bevor dieser dann in den master-Branch gemerged wird."
+        "text": "Im Release-Branch",
+        "korrekt": "Falsch",
+        "warum": "Der Release-Branch dient der Möglichtkeit Bug-fixing oder Ähnliches zu betreiben, bevor dieser dann in den master-Branch gemerged wird."
       },
       {
-        "answer": "Im Master-Branch",
-        "correctness": "Falsch",
-        "reason": "Im master-Branch dürfen sich nur stabile und vollständige Versionen des Projektes befinden, deshalb darf in diesem keine Entwicklung betrieben werden."
+        "text": "Im Master-Branch",
+        "korrekt": "Falsch",
+        "warum": "Im master-Branch dürfen sich nur stabile und vollständige Versionen des Projektes befinden, deshalb darf in diesem keine Entwicklung betrieben werden."
       },
       {
-        "answer": "Im Feature-Branch",
-        "correctness": "Richtig",
-        "reason": "In den Feature-Branches findet die eigentliche Entwicklung der Software statt."
+        "text": "Im Feature-Branch",
+        "korrekt": "Richtig",
+        "warum": "In den Feature-Branches findet die eigentliche Entwicklung der Software statt."
       },
       {
-        "answer": "Im Develop-Branch",
-        "correctness": "Falsch",
-        "reason": "Der Develop-Branch ist nur zum Mergen der Feature-Branches zuständig, hier sollen gegebenenfalls auftretende Merge-Konflikte behoben werden."
+        "text": "Im Develop-Branch",
+        "korrekt": "Falsch",
+        "warum": "Der Develop-Branch ist nur zum Mergen der Feature-Branches zuständig, hier sollen gegebenenfalls auftretende Merge-Konflikte behoben werden."
       }
     ]
   },
   {
-    "question": "Welche Aussage trifft NICHT zu?",
-    "difficulty": "leicht",
-    "answers": [
+    "text": "Welche Aussage trifft NICHT zu?",
+    "bereich": "Merge-Konflikte in GIT",
+    "level": "leicht",
+    "antworten": [
       {
-        "answer": "Mergen beschreibt den Prozess, zwei Branches zuasmmen zu führen.",
-        "correctness": "Falsch",
-        "reason": "Richtig"
+        "text": "Mergen beschreibt den Prozess, zwei Branches zuasmmen zu führen.",
+        "korrekt": "Falsch",
+        "warum": "Richtig"
       },
       {
-        "answer": "-git merge ist der zugehörige Befehl, um 2 Branches zu mergen.",
-        "correctness": "Falsch",
-        "reason": "Richtig."
+        "text": "-git merge ist der zugehörige Befehl, um 2 Branches zu mergen.",
+        "korrekt": "Falsch",
+        "warum": "Richtig."
       },
       {
-        "answer": "Unstrukturierter Code sorgt für häufigere Merge-Konflikte.",
-        "correctness": "Falsch",
-        "reason": "Richtig"
+        "text": "Unstrukturierter Code sorgt für häufigere Merge-Konflikte.",
+        "korrekt": "Falsch",
+        "warum": "Richtig"
       },
       {
-        "answer": "Bei einer in beiden Branches veränderten Datei, wird die neuere Version übernommen.",
-        "correctness": "Richtig",
-        "reason": "In diesem Fall gibt es ein Merge-Konflikt, diesen muss man manuell auflösen."
+        "text": "Bei einer in beiden Branches veränderten Datei, wird die neuere Version übernommen.",
+        "korrekt": "Richtig",
+        "warum": "In diesem Fall gibt es ein Merge-Konflikt, diesen muss man manuell auflösen."
       }
     ]
   },
   {
-    "question": "Wie finden Änderungen den Weg ins lokale Repository?",
-    "difficulty": "einfach",
-    "answers": [
+    "text": "Wie finden Änderungen den Weg ins lokale Repository?",
+    "bereich": "Befehle von GIT",
+    "level": "einfach",
+    "antworten": [
       {
-        "answer": "Durch Pushen.",
-        "correctness": "Falsch",
-        "reason": "Durch Pushen werden Änderungen im lokalen Repository ins Remote-Repository veröffentlicht, nicht ins lokale Repository aufgenommen."
+        "text": "Durch Pushen.",
+        "korrekt": "Falsch",
+        "warum": "Durch Pushen werden Änderungen im lokalen Repository ins Remote-Repository veröffentlicht, nicht ins lokale Repository aufgenommen."
       },
       {
-        "answer": "Sie müssen Committed werden.",
-        "correctness": "Richtig",
-        "reason": ""
+        "text": "Sie müssen Committed werden.",
+        "korrekt": "Richtig",
+        "warum": "Richtig"
       },
       {
-        "answer": "Änderungen werden schon während des Schreibens durch Git ins Repository aufgenommen.",
-        "correctness": "Falsch",
-        "reason": "Git ist kein Hintergrundprozess, der ständig läuft, sondern wird über explizite Befehle gesteuert, die den aktuellen Arbeitsstand verarbeiten."
+        "text": "Änderungen werden schon während des Schreibens durch Git ins Repository aufgenommen.",
+        "korrekt": "Falsch",
+        "warum": "Git ist kein Hintergrundprozess, der ständig läuft, sondern wird über explizite Befehle gesteuert, die den aktuellen Arbeitsstand verarbeiten."
       },
       {
-        "answer": "Durch den Befehl git add.",
-        "correctness": "Falsch",
-        "reason": "Weil die Änderungen dadurch nur in die Staging Area aufgenommen werden. Hinzufügen zum Repository erfolgt durch Commiten"
+        "text": "Durch den Befehl git add.",
+        "korrekt": "Falsch",
+        "warum": "Weil die Änderungen dadurch nur in die Staging Area aufgenommen werden. Hinzufügen zum Repository erfolgt durch Commiten"
       }
     ]
   }
