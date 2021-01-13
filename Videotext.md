@@ -14,12 +14,11 @@ GIT erstellt bei jedem Commit einen Schnappschuss des Projekts, sodass jeder Bea
 Der Entwickler kann innerhalb des Repositories jederzeit zu einem beliebigen Commit springen.
 
 ### Branching
-Branching ist ein Zentraler Bestandteil von GIT. In GIT wurden Branches sehr einfach und schlank implementiert, dadurch kann schnell und ohne Probleme mit ihnen gearbeitet werden.
-In der verteilten Softwareentwicklung helfen sie vor allem den Entwicklern unabhängig und mit geringen Konflikten gleichzeitig an einem Projekt zu arbeiten, wodurch das Team vor Störungen durch instabile Features geschützt ist.
-Branches sind das zentrale Feature von git, welches in der verteilten Softwareentwicklung eine störungsfreie Arbeit ermöglicht. Richtig angewandt, sorgen Branches dafür dass Entwickler unabhängig und ohne Konflikte gleichzeitig an einem Projekt arbeiten können. 
-Branches sind eine Abzweigung von der Hauptentwicklungslinie, das ermöglicht es, neue Features erst zu implementieren, wenn sie wirklich fertig sind.
-Jeder Branch bildet eine Abzweigung von der Hauptentwicklungslinie. So kann auf einem Branch beliebig programmiert und getestet werden, ohne dass das Hauptprojekt durch unfertige oder instabile Features unbenutzbar wird. Änderungen werden also erst wieder in die Hauptlinie eingebracht, wenn sie zu 100% fertiggestellt sind.
--viele entwickler können arbeiten
+Branching ist ein zentraler Bestandteil von GIT. In GIT wurden Branches sehr einfach und schlank implementiert, dadurch kann schnell und ohne Probleme mit ihnen gearbeitet werden. Durch Branching wird es möglich, dass viele Entwickler gleichzeitig am Code arbeiten können. 
+Branches sind eine Abzweigung von der Hauptentwicklungslinie. Das ermöglicht es, neue Features erst zu implementieren, wenn sie wirklich fertig sind.
+So kann auf einem Branch beliebig programmiert und getestet werden, ohne dass das Hauptprojekt durch unfertige oder instabile Features unbenutzbar wird. Änderungen werden erst wieder in die Hauptlinie eingebracht, wenn sie zu 100% fertiggestellt sind. Dadurch ist das Team vor Störungen durch instabile Features geschützt.
+Insbesondere in der verteilten Softwareentwicklung helfen sie den Entwicklern mit wenigen Konflikten gleichzeitig an einem Projekt zu arbeiten. Richtig angewandt, sorgen Branches dafür, dass unabhängig und ohne Konflikte mit vielen Personen an einem Projekt gearbeitet werden kann. 
+
 
 ### Branching Strategien
 Durchgeführt wird das Branching nach einer bestimmten Strategie, die ein Vorgehensmodell der Entwicklung vorgibt. So erhält jeder Branch einen bestimmten Zweck. Branching Strategien helfen bei der Organisation des Projektes und bei der Unterstützung von Vorgehensmodellen wie etwa Scrum. Branching Strategien sorgen aber auch für Ordnung innerhalb des Entwicklungsprozesses.
@@ -27,9 +26,8 @@ Durchgeführt wird das Branching nach einer bestimmten Strategie, die ein Vorgeh
 #### Feature Branching
 Feature Branching ist die erste Branchingstrategie, die wir uns anschauen werden. Es ist eine einfache und offene Strategie. Dem Entwicklerteam bleibt hierbei viel Freiraum bei der Umsetzung dieser Strategie.
 Feature Branching ist gut für lineare Vorgehensmodelle, wie zum Beispiel dem Wasserfallmodell geeignet.
-Es wird, wie der Name schon andeutet für jedes Feature des Projektes ein neuer Branch angelegt. Auf dem Beispielbild sind dass die Branches A und B. Dadurch ist die Entwicklung eines Features getrennt von der Hauptline. Der Entwickler kann ungestört an dem Feature arbeiten ohne dass er einen bestehenden Build zerstört. Wurde ein Feature fertig implementiert und getestet, wird der zugehörige Branch in den master-Branch gemerged.
--jeder entwickler ein branch, management
--gut für verteiltes arbeiten
+Es wird, wie der Name schon andeutet für jedes Feature des Projektes ein neuer Branch angelegt. Auf dem Beispielbild sind dass die Branches A und B. Dadurch ist die Entwicklung eines Features getrennt von der Hauptline. Idealerweise arbeitet jeder Entwickler auf seinem eigenen Branch. Der Entwickler kann ungestört an dem Feature arbeiten ohne dass er einen bestehenden Build zerstört. Wurde ein Feature fertig implementiert und getestet, wird der zugehörige Branch in den master-Branch gemerged. Wenn jeder Entwickler an seinem eigenen Branch arbeitet, können diese auch räumlich getrennt arbeiten, da sie sich nicht beim Bearbeiten derselben Datei in die Quere kommen. 
+
 
 #### Gitflow
 Als nächste Strategie stellen wir GitFlow vor. 
